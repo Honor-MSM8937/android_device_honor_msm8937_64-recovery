@@ -31,6 +31,7 @@ BOARD_USES_MMCUTILS := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_CUSTOM_BOOTIMG_MK := device/android/msm8937_64/custombootimg.mk
 TW_INPUT_BLACKLIST := "hbtp_vm"
+TARGET_RECOVERY_FSTAB := device/android/msm8937_64/recovery.fstab
 include $(LOCAL_PATH)/kernel.mk
 include device/generic/twrpbuilder/BoardConfig64.mk
 
