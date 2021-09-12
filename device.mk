@@ -16,5 +16,5 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/huawei/generic_a53
+LOCAL_PATH := device/android/msm8937_64
 
