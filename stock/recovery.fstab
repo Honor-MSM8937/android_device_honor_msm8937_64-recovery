@@ -33,7 +33,7 @@
 /dev/block/bootdevice/by-name/version      /version        ext4    ro,barrier=1                                                    wait
 /dev/block/bootdevice/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
 /dev/block/bootdevice/by-name/userdata     /data           f2fs    noatime,nosuid,nodev,discard,inline_data,inline_xattr     wait,check,length=-16384
-/dev/block/mmcblk1p1                       /sdcard         vfat    nosuid,nodev                                                    wait
+/dev/block/mmcblk1p1                       /sdcard         auto    nosuid,nodev                                                    wait
 /dev/block/bootdevice/by-name/boot         /boot           emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/recovery     /recovery       emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/system       /newsys         ext4    ro,barrier=1                                                    wait
