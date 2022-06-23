@@ -13,11 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+LOCAL_DIR := $(call my-dir)
 
 ifneq ($(filter msm8937_64,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/android/msm8937_64/
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(call all-makefiles-under,$(LOCAL_DIR))
 
 endif

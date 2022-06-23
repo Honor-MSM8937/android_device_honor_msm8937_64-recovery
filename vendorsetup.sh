@@ -103,9 +103,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
   	   export | grep "TW_" >> $FOX_BUILD_LOG_FILE
  	fi
 
-  	for var in eng user userdebug; do
-  		add_lunch_combo omni_"$FDEVICE"-$var
-  	done
+  	#for var in eng user userdebug; do
+  	#	add_lunch_combo omni_"$FDEVICE"-$var
+  	#done
 fi
 #
 

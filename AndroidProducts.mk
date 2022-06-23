@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/android/msm8937_64/
-
+LOCAL_PATH := device/honor/msm8937_64
 PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_msm8937_64.mk
+
+COMMON_LUNCH_CHOICES := \
+    omni_msm8937_64-userdebug \
+    omni_msm8937_64-user \
+    omni_msm8937_64-eng

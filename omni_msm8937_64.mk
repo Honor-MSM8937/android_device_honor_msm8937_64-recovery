@@ -17,6 +17,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 PRODUCT_DEVICE := msm8937_64
 PRODUCT_NAME := omni_msm8937_64
-PRODUCT_BRAND := android
-PRODUCT_MODEL := msm8937 for arm64
-PRODUCT_MANUFACTURER := android
+PRODUCT_BRAND := honor
+PRODUCT_MODEL := Honor 7A Pro
+PRODUCT_MANUFACTURER := honor

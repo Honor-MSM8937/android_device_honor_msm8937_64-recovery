@@ -1,4 +1,4 @@
-#
+$
 # Copyright (C) 2020 The Android Open Source Project
 # Copyright (C) 2020 The TWRP Open Source Project
 # Copyright (C) 2020 SebaUbuntu's TWRP device tree generator
@@ -16,5 +16,4 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/android/msm8937_64
-
+LOCAL_PATH := $(call my-dir)
