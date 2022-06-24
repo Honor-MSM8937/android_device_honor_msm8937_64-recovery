@@ -68,15 +68,16 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         # -- end R11 settings --
 
 	# run a process after formatting data to work-around MTP issues
-	export OF_RUN_POST_FORMAT_PROCESS=0
+	# export OF_RUN_POST_FORMAT_PROCESS=0 - Disabled due to deprecation.
 
 	# Build vars for our msm.
 	export ALLOW_MISSING_DEPENDENCIES=true
 	export LC_ALL="C"
-	export FOX_INSTALLER_DEBUG_MODE=1
+	export FOX_INSTALLER_DEBUG_MODE=0
+	export FOX_DELETE_AROMAFM=1
 	export OF_MAINTAINER=KrutosX
 	export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/platform/soc/7824900.sdhci/by-name/recovery_ramdisk"	
-	export OF_FLASHLIGHT_ENABLE=1
+	export OF_FLASHLIGHT_ENABLE=0
 	export OF_FL_PATH1="/sys/devices/soc/7af6000.i2c/i2c-6/6-006b/leds/torch-light0"
 	export OF_FL_PATH2="/sys/devices/soc/7af6000.i2c/i2c-6/6-0063/leds/torch-light1"
 	export TARGET_DEVICE_ALT="msm8937, msm8937_64, aum_l29, AUM_L29, AUML29"
