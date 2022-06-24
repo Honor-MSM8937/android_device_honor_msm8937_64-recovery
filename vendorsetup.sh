@@ -37,22 +37,14 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export TW_DEFAULT_LANGUAGE="en"
 	export OF_KEEP_FORCED_ENCRYPTION=0
 	export OF_PATCH_AVB20=0
-	# Disable MIUI SF
 	export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
         
 	export OF_SCREEN_H=2160
-        # export OF_STATUS_H=80
 	export OF_USE_MAGISKBOOT=0
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=0
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE=0
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-	# export OF_FORCE_MAGISKBOOT_BOOT_PATCH_MIUI=1; # if you disable this, then enable the next line
-	# export OF_NO_MIUI_PATCH_WARNING=1
-	# export OF_USE_GREEN_LED=0
-
-	# use magisk 21.4 for the magisk addon
-	#export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk.zip
 
 	export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
@@ -70,13 +62,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 	# OTA for custom ROMs
         export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=0
-        # export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 
         # -- add settings for R11 --
-        export FOX_R11=1
-        # export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
         export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
-#        export FOX_ADVANCED_SECURITY=1
         # -- end R11 settings --
 
 	# run a process after formatting data to work-around MTP issues
@@ -84,7 +72,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 	# Build vars for our msm.
 	export ALLOW_MISSING_DEPENDENCIES=true
-	#export ALLOW_MISSING_DEPENDENCIES=1
 	export LC_ALL="C"
 	export FOX_INSTALLER_DEBUG_MODE=1
 	export OF_MAINTAINER=KrutosX
@@ -94,7 +81,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_FL_PATH2="/sys/devices/soc/7af6000.i2c/i2c-6/6-0063/leds/torch-light1"
 	export TARGET_DEVICE_ALT="msm8937, msm8937_64, aum_l29, AUM_L29, AUML29"
 	export LC_ALL="C"
-	#export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=0
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
@@ -103,10 +89,5 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	   export | grep "TARGET_" >> $FOX_BUILD_LOG_FILE
   	   export | grep "TW_" >> $FOX_BUILD_LOG_FILE
  	fi
-
-  	#for var in eng user userdebug; do
-  	#	add_lunch_combo omni_"$FDEVICE"-$var
-  	#done
 fi
 #
-
