@@ -1,5 +1,5 @@
 # android_device_honor_msm8937_64
-# Recovery Tree.
+### Recovery Tree.
 
 OrangeFox device tree for Honor 7A (AUM-L29)
 - To build OrangeFox, use branch Android 9, cuz this device has no dynamic partitions.
