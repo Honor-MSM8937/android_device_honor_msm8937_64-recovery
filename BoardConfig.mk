@@ -37,10 +37,10 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 7777777777
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-PRODUCT_PACKAGES += \
-    mkfs.f2fs \
-    fsck.f2fs \
-    fibmap.f2fs
+#PRODUCT_PACKAGES += \
+#    mkfs.f2fs \
+#    fsck.f2fs \
+#    fibmap.f2fs
 
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
@@ -54,9 +54,9 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 PLATFORM_SECURITY_PATCH := 2127-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
-PRODUCT_PACKAGES += \
-    qcom_decrypt \
-    qcom_decrypt_fbe
+#PRODUCT_PACKAGES += \
+#    qcom_decrypt \
+#    qcom_decrypt_fbe
 
 # Architecture
 TARGET_ARCH := arm64
