@@ -13,7 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+PRODUCT_SHIPPING_API_LEVEL := 26
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_DEVICE := msm8937_64
