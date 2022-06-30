@@ -20,6 +20,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+BOARD_VENDOR := honor
+TARGET_VENDOR := honor
 PRODUCT_DEVICE := msm8937_64
 PRODUCT_NAME := twrp_msm8937_64
 PRODUCT_BRAND := honor
