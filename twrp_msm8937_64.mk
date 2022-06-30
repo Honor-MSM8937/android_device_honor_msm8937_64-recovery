@@ -21,3 +21,5 @@ PRODUCT_NAME := twrp_msm8937_64
 PRODUCT_BRAND := honor
 PRODUCT_MODEL := Honor 7A Pro
 PRODUCT_MANUFACTURER := honor
+
+$(call inherit-product, device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)/device.mk)
