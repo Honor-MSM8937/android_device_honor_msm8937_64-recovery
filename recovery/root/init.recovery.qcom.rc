@@ -27,10 +27,20 @@
 import /init.recovery.qcom_decrypt.rc
 
 
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    export ANDROID_ROOT /system_root
+
+on boot
+    mkdir /dsp
+    mkdir /firmware
+    mount ext4 /dev/block/bootdevice/by-name/dsp /dsp ro
+    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro
+    start qseecomd
+    exec u:r:recovery:s0 -- /system/bin/sleep 1s
+    start keymaster-3-0
+
 on init
     setprop prepdecrypt.loglevel 2
     write /sys/class/backlight/panel0-backlight/brightness 200
-
-on fs
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-
