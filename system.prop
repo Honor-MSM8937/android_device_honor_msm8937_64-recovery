@@ -1,3 +1,9 @@
 ro.display.series=Honor 7A Pro
 ro.product.board=msm8937
 ro.board.platform=msm8937
+
+ro.product.name=Honor 7A Pro
+ro.product.brand=Honor
+ro.product.model=Honor 7A Pro
+ro.product.device=msm8937_64
+ro.product.manufacturer=QUALCOMM
