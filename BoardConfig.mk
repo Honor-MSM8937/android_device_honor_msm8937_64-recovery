@@ -81,7 +81,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/soc/78db000.usb/msm_hsusb/gadge
 TARGET_RECOVERY_DEVICE_MODULES += \
     libandroidicu \
     libxml2 \
-    vendor.display.config@1.0 
+    vendor.display.config@1.0 \
+    vendor.display.config@2.0
 
 # Recovery
 BOARD_HAS_NO_REAL_SDCARD := true
